@@ -1,0 +1,121 @@
+:root {
+    --Rosewater-HEX: #f4dbd6;
+    --Rosewater-RGB: rgb(244, 219, 214);
+    --Rosewater-HSL: hsl(10, 58%, 90%);
+
+    --Flamingo-HEX: #f0c6c6;
+    --Flamingo-RGB: rgb(240, 198, 198);
+    --Flamingo-HSL: hsl(0, 58%, 86%);
+
+    --Pink-HEX: #f5bde6;
+    --Pink-RGB: rgb(245, 189, 230);
+    --Pink-HSL: hsl(316, 74%, 85%);
+
+    --Mauve-HEX: #c6a0f6;
+    --Mauve-RGB: rgb(198, 160, 246);
+    --Mauve-HSL: hsl(267, 83%, 80%);
+
+    --Red-HEX: #ed8796;
+    --Red-RGB: rgb(237, 135, 150);
+    --Red-HSL: hsl(351, 74%, 73%);
+
+    --Maroon-HEX: #ee99a0;
+    --Maroon-RGB: rgb(238, 153, 160);
+    --Maroon-HSL: hsl(355, 71%, 77%);
+
+    --Peach-HEX: #f5a97f;
+    --Peach-RGB: rgb(245, 169, 127);
+    --Peach-HSL: hsl(21, 86%, 73%);
+
+    --Yellow-HEX: #eed49f;
+    --Yellow-RGB: rgb(238, 212, 159);
+    --Yellow-HSL: hsl(40, 70%, 78%);
+
+    --Green-HEX: #a6da95;
+    --Green-RGB: rgb(166, 218, 149);
+    --Green-HSL: hsl(105, 48%, 72%);
+
+    --Teal-HEX: #8bd5ca;
+    --Teal-RGB: rgb(139, 213, 202);
+    --Teal-HSL: hsl(171, 47%, 69%);
+
+    --Sky-HEX: #91d7e3;
+    --Sky-RGB: rgb(145, 215, 227);
+    --Sky-HSL: hsl(189, 59%, 73%);
+
+    --Sapphire-HEX: #7dc4e4;
+    --Sapphire-RGB: rgb(125, 196, 228);
+    --Sapphire-HSL: hsl(199, 66%, 69%);
+
+    --Blue-HEX: #8aadf4;
+    --Blue-RGB: rgb(138, 173, 244);
+    --Blue-HSL: hsl(220, 83%, 75%);
+
+    --Lavender-HEX: #b7bdf8;
+    --Lavender-RGB: rgb(183, 189, 248);
+    --Lavender-HSL: hsl(234, 82%, 85%);
+
+    --Text-HEX: #cad3f5;
+    --Text-RGB: rgb(202, 211, 245);
+    --Text-HSL: hsl(227, 68%, 88%);
+
+    --Subtext1-HEX: #b8c0e0;
+    --Subtext1-RGB: rgb(184, 192, 224);
+    --Subtext1-HSL: hsl(228, 39%, 80%);
+
+    --Subtext0-HEX: #a5adcb;
+    --Subtext0-RGB: rgb(165, 173, 203);
+    --Subtext0-HSL: hsl(227, 27%, 72%);
+
+    --Overlay2-HEX: #939ab7;
+    --Overlay2-RGB: rgb(147, 154, 183);
+    --Overlay2-HSL: hsl(228, 20%, 65%);
+
+    --Overlay1-HEX: #8087a2;
+    --Overlay1-RGB: rgb(128, 135, 162);
+    --Overlay1-HSL: hsl(228, 15%, 57%);
+
+    --Overlay0-HEX: #6e738d;
+    --Overlay0-RGB: rgb(110, 115, 141);
+    --Overlay0-HSL: hsl(230, 12%, 49%);
+
+    --Surface2-HEX: #5b6078;
+    --Surface2-RGB: rgb(91, 96, 120);
+    --Surface2-HSL: hsl(230, 14%, 41%);
+
+    --Surface1-HEX: #494d64;
+    --Surface1-RGB: rgb(73, 77, 100);
+    --Surface1-HSL: hsl(231, 16%, 34%);
+
+    --Surface0-HEX: #363a4f;
+    --Surface0-RGB: rgb(54, 58, 79);
+    --Surface0-HSL: hsl(230, 19%, 26%);
+
+    --Base-HEX: #24273a;
+    --Base-RGB: rgb(36, 39, 58);
+    --Base-HSL: hsl(232, 23%, 18%);
+
+    --Mantle-HEX: #1e2030;
+    --Mantle-RGB: rgb(30, 32, 48);
+    --Mantle-HSL: hsl(233, 23%, 15%);
+
+    --Crust-HEX: #181926;
+    --Crust-RGB: rgb(24, 25, 38);
+    --Crust-HSL: hsl(236, 23%, 12%);
+}
+
+* {
+    font-family: Impact, sans-serif;
+    letter-spacing: 0.6px;
+}
+
+body {
+    background: var(--Base-HEX);
+    color: var(--Text-HEX);
+    margin: 30px;
+}
+
+a:hover {
+    color: var(--Green-HEX);
+    cursor: pointer;
+}
