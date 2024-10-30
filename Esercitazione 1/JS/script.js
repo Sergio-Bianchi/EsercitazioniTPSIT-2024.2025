@@ -72,3 +72,8 @@ function closeModal() {
     modal.classList.add("hidden")
 }
 
+function resetStorage() {
+    nomi = [];
+    altezze = [];
+}
+

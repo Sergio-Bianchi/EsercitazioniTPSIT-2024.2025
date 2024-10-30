@@ -115,7 +115,19 @@ body {
     margin: 30px;
 }
 
+
+
+a:link, a:visited {
+    text-decoration: none;
+    color: var(--Text-HEX);
+    cursor: pointer;
+}
+
 a:hover {
     color: var(--Green-HEX);
     cursor: pointer;
+}
+
+hr {
+    color: var(--Flamingo-HEX);
 }
