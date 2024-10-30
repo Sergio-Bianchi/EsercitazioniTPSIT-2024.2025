@@ -1,6 +1,13 @@
 let player = 1;
 let board = [-1, -1, -1, -1, -1, -1, -1, -1, -1]
 
+function setWinner(win) {
+
+
+}
+
+
+
 function addCross(ele, index) {
 
     if (ele.classList.contains("selected")) {

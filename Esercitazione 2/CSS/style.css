@@ -28,6 +28,24 @@
     background-color: var(--Red-HEX);
 }
 
-.greenElement{
+.greenElement {
     background-color: var(--Green-HEX);
+}
+
+
+#leaderboard {
+    width: 100%;
+    display: flex;
+    height: auto;
+}
+
+#leaderboard > h2 {
+    width: fit-content;
+    margin: 0;
+
+}
+
+#leaderboard > h2:nth-child(2) {
+    margin-right: 0;
+    margin-left: auto;
 }
