@@ -15,8 +15,10 @@
 <hr>
 
 <div id="leaderboard">
-    <h2> Player One: 5</h2>
-    <h2> Player two: 4</h2>
+    <h2 id="playerOne.name" onclick="setName(1)" class="playerName"> Player One: &nbsp</h2>
+    <h2 id="playerOne.score" class="playerScore"> 0 </h2>
+    <h2 id="playerTwo.name" onclick="setName(2)" class="playerName"> Player two: &nbsp</h2>
+    <h2 id="playerTwo.score" class="playerScore"> 0 </h2>
 
 </div>
 
@@ -30,9 +32,12 @@
     <div onclick="addCross(this, 6)"></div>
     <div onclick="addCross(this, 7)"></div>
     <div onclick="addCross(this, 8)"></div>
-
 </div>
 
+<h2 onclick="game.resetGame()"> NEW GAME </h2>
+<h2 onclick="game.resetPoints()"> RESET POINTS </h2>
+<h2 onclick="game.resetBoard()"> RESET BOARD </h2>
+<h2 onclick="game.resetNames()"> RESET NAMES </h2>
 
 
 </body>

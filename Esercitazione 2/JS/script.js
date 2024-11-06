@@ -1,47 +1,129 @@
-let player = 1;
-let board = [-1, -1, -1, -1, -1, -1, -1, -1, -1]
+class Player {
+    constructor(name) {
+        this.name = name.toString();
+        this.points = 0;
+    }
+}
+
+
+class Game {
+    constructor() {
+        this.playerSelected = 1;
+        this.board = [-1, -1, -1, -1, -1, -1, -1, -1, -1]
+        this.move = 0;
+        this.players = [
+            new Player("Player ONE"),
+            new Player("Player TWO")
+        ]
+    }
+
+    addPoint(p) {
+        this.players[p].points++;
+    }
+
+    updateScore() {
+        let scores = document.getElementsByClassName("playerScore");
+        for (let i = 0; i < scores.length; i++) {
+            scores[i].innerText = this.players[i].points;
+        }
+    }
+
+    resetBoard() {
+        this.move = 0;
+        const tris = document.getElementById("tris");
+        for (let slot in this.board) {
+            this.board[slot] = -1;
+        }
+        for (let slot in tris.children) {
+            tris.children[slot].removeAttribute("class")
+        }
+    }
+
+    resetPoints() {
+        this.players[0].points = 0;
+        this.players[1].points = 0;
+        this.updateScore();
+    }
+
+    resetNames() {
+        this.players[0].name = "Player ONE"
+        this.players[1].name = "Player TWO"
+    }
+
+    resetGame() {
+        this.resetNames();
+        this.resetPoints();
+        this.resetBoard();
+    }
+
+
+}
+
+
+let game = new Game()
 
 function setWinner(win) {
+    if (win === 1) game.players[0].points++;
+    if (win === 2) game.players[1].points++;
+}
 
+function setName(p) {
 
 }
 
 
 
 function addCross(ele, index) {
+    let win = 0;
 
     if (ele.classList.contains("selected")) {
-        return
+        return;
     }
 
-    board[index] = player;
-    console.log(board)
-    if (player === 1) {
+    game.board[index] = game.playerSelected;
+    console.log(game.board)
+
+    if (game.playerSelected === 1) {
         ele.classList.add("greenElement", "selected")
-        player = 2
-    } else if (player === 2) {
+        game.playerSelected = 2
+    } else if (game.playerSelected === 2) {
         ele.classList.add("redElement", "selected")
-        player = 1
+        game.playerSelected = 1
     }
+    game.move++;
 
-    for (let i = 0; i < 8; i +=3) {
-        if (board[i] < 1) {
-        } else if (board[i] === board[i + 1] && board[i] === board[i + 2]) {
-            alert(board[i])
+    for (let i = 0; i < 8; i += 3) {
+        if (game.board[i] < 1) {
+        } else if (game.board[i] === game.board[i + 1] && game.board[i] === game.board[i + 2]) {
+            win = game.board[i]
         }
     }
     for (let i = 0; i < 3; i++) {
-        if (board[i] < 1) {
-        } else if (board[i] === board[i + 3] && board[i] === board[i + 6]) {
-            alert(board[i])
+        if (game.board[i] < 1) {
+        } else if (game.board[i] === game.board[i + 3] && game.board[i] === game.board[i + 6]) {
+            win = game.board[i]
         }
 
     }
-    if (board[0] > 0 ) {
-        if (board[0] === board[4] && board[0] === board[8]) alert(board[0])
+    if (game.board[0] > 0) {
+        if (game.board[0] === game.board[4] && game.board[0] === game.board[8]) {
+            win = game.board[0]
+        }
     }
-    if (board[6] > 0 ) {
-        if (board[6] === board[4] && board[6] === board[2]) alert(board[6])
+    if (game.board[6] > 0) {
+        if (game.board[6] === game.board[4] && game.board[6] === game.board[2]) {
+            win = game.board[6]
+        }
+    }
+
+    if (win !== 0) {
+        game.addPoint(win - 1);
+        game.updateScore();
+        game.resetBoard();
+    }
+
+    if (game.move === 9) {
+        game.resetBoard();
     }
 
 
