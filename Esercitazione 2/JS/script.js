@@ -21,6 +21,59 @@ class Game {
         this.players[p].points++;
     }
 
+
+    selectPlayer(p) {
+        this.playerSelected = p;
+
+        let playerDivs = document.getElementsByClassName(`player-${p}`);
+
+        try {
+            for(let i = 0; i < 2; i++) {
+                console.log(i)
+                playerDivs[i].classList.add("underline");
+            }
+
+            if(p === 1) {
+                playerDivs = document.getElementsByClassName("player-2")
+            }
+            else {
+                playerDivs = document.getElementsByClassName("player-1")
+
+            }
+
+            console.log(playerDivs)
+            for(let i = 0; i < 2; i++) {
+                playerDivs[i].classList.remove("underline")
+            }
+        } catch (err) {
+            console.log(err)
+        }
+
+
+    }
+
+    setWinner(p) {
+        this.showModal();
+        let winnerElement = document.getElementById("modalWinner")
+        if (p === 2) {
+            winnerElement.innerText = "Tie!"
+            return;
+        }
+
+        this.addPoint(p)
+        winnerElement.innerText = this.players[p].name + " wins!"
+    }
+
+    showModal() {
+        let modalDiv = document.getElementById("modalBackground")
+        modalDiv.classList.remove("hidden")
+    }
+
+    hideModal() {
+        let modalDiv = document.getElementById("modalBackground")
+        modalDiv.classList.add("hidden")
+    }
+
     updateScore() {
         let scores = document.getElementsByClassName("playerScore");
         for (let i = 0; i < scores.length; i++) {
@@ -62,15 +115,10 @@ class Game {
 
 let game = new Game()
 
-function setWinner(win) {
-    if (win === 1) game.players[0].points++;
-    if (win === 2) game.players[1].points++;
-}
 
 function setName(p) {
 
 }
-
 
 
 function addCross(ele, index) {
@@ -84,12 +132,19 @@ function addCross(ele, index) {
     console.log(game.board)
 
     if (game.playerSelected === 1) {
+
         ele.classList.add("greenElement", "selected")
-        game.playerSelected = 2
+        game.selectPlayer(2)
+
+
     } else if (game.playerSelected === 2) {
+
         ele.classList.add("redElement", "selected")
-        game.playerSelected = 1
+        game.selectPlayer(1)
     }
+
+
+
     game.move++;
 
     for (let i = 0; i < 8; i += 3) {
@@ -117,12 +172,13 @@ function addCross(ele, index) {
     }
 
     if (win !== 0) {
-        game.addPoint(win - 1);
+        game.setWinner(win - 1);
         game.updateScore();
         game.resetBoard();
     }
 
     if (game.move === 9) {
+        game.setWinner(2)
         game.resetBoard();
     }
 

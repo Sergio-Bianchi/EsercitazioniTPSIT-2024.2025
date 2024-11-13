@@ -131,3 +131,8 @@ a:hover {
 hr {
     color: var(--Flamingo-HEX);
 }
+
+.hidden {
+    display: none; !important;
+
+}

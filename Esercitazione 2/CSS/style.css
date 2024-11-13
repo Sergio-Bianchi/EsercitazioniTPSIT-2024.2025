@@ -47,10 +47,34 @@
 }
 
 #leaderboard > .playerName:hover {
-    cursor: po;
+    cursor: pointer;
+}
+
+#leaderboard > .player-1.underline {
+    border-bottom: 3px solid var(--Green-HEX);
+    text-decoration-color: var(--Green-HEX);
+}
+
+#leaderboard > .player-2.underline {
+    border-bottom: 3px solid var(--Red-HEX);
+    text-decoration-color: var(--Red-HEX);
 }
 
 #leaderboard > h2:nth-child(3) {
     margin-right: 0;
     margin-left: auto;
 }
+
+.modalBackground {
+    opacity: 80%;
+    width: 100vw;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    position: absolute;
+    background: var(--Crust-HEX);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

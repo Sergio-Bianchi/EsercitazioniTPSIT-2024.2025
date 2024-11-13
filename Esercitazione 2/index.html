@@ -11,14 +11,19 @@
     <link rel="stylesheet" href="../CSS/global.css">
 </head>
 <body>
+<div id="modalBackground" class="modalBackground hidden" onclick="game.hideModal()">
+    <h1 id="modalWinner"></h1>
+
+</div>
+
 <h1> TRIS </h1>
 <hr>
 
 <div id="leaderboard">
-    <h2 id="playerOne.name" onclick="setName(1)" class="playerName"> Player One: &nbsp</h2>
-    <h2 id="playerOne.score" class="playerScore"> 0 </h2>
-    <h2 id="playerTwo.name" onclick="setName(2)" class="playerName"> Player two: &nbsp</h2>
-    <h2 id="playerTwo.score" class="playerScore"> 0 </h2>
+    <h2 id="playerOne.name" onclick="setName(1)" class="playerName player-1 underline"> Player One: &nbsp</h2>
+    <h2 id="playerOne.score" class="playerScore player-1"> 0 </h2>
+    <h2 id="playerTwo.name" onclick="setName(2)" class="playerName player-2"> Player two: &nbsp</h2>
+    <h2 id="playerTwo.score" class="playerScore player-2"> 0 </h2>
 
 </div>
 
