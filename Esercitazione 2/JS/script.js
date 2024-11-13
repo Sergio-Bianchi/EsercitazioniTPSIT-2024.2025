@@ -134,13 +134,19 @@ function addCross(ele, index) {
 
     if (game.playerSelected === 1) {
 
+
+
         ele.classList.add("greenElement", "selected")
+        let audio = new Audio("../IMG/player-1.wav");
+        audio.play();
         game.selectPlayer(2)
 
 
     } else if (game.playerSelected === 2) {
 
         ele.classList.add("redElement", "selected")
+        let audio = new Audio("../IMG/player-2.wav");
+        audio.play();
         game.selectPlayer(1)
     }
 
