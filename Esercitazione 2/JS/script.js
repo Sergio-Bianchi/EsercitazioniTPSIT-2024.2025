@@ -72,6 +72,7 @@ class Game {
     hideModal() {
         let modalDiv = document.getElementById("modalBackground")
         modalDiv.classList.add("hidden")
+        game.resetBoard();
     }
 
     updateScore() {
@@ -174,12 +175,10 @@ function addCross(ele, index) {
     if (win !== 0) {
         game.setWinner(win - 1);
         game.updateScore();
-        game.resetBoard();
     }
 
     if (game.move === 9) {
         game.setWinner(2)
-        game.resetBoard();
     }
 
 
