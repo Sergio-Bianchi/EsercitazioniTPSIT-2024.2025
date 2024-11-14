@@ -181,6 +181,7 @@ function addCross(ele, index) {
     if (win !== 0) {
         game.setWinner(win - 1);
         game.updateScore();
+        return;
     }
 
     if (game.move === 9) {
