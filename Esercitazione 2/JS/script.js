@@ -61,7 +61,17 @@ class Game {
         }
 
         this.addPoint(p)
-        winnerElement.innerText = this.players[p].name + " wins!"
+        winnerElement.innerText = this.getPlayerName(p+1) + " wins!"
+    }
+
+
+    getPlayerName(p) {
+        let output = document.getElementById(`player-${p}.name`).value
+
+        if (!output) {
+            output = this.players[p-1].name;
+        }
+        return output
     }
 
     showModal() {
@@ -89,7 +99,12 @@ class Game {
             this.board[slot] = -1;
         }
         for (let slot in tris.children) {
-            tris.children[slot].removeAttribute("class")
+            try {
+                tris.children[slot].removeAttribute("class")
+            } catch (err) {
+                console.log("Useless operation baka")
+            }
+
         }
     }
 
@@ -100,14 +115,19 @@ class Game {
     }
 
     resetNames() {
-        this.players[0].name = "Player ONE"
-        this.players[1].name = "Player TWO"
+        let inputs = document.getElementsByClassName("playerEdit")
+        for (let i in inputs) {
+            inputs[i].value = ""
+        }
     }
 
     resetGame() {
+        this.resetBoard();
         this.resetNames();
         this.resetPoints();
-        this.resetBoard();
+    }
+
+    setName(p) {
     }
 
 
@@ -117,9 +137,6 @@ class Game {
 let game = new Game()
 
 
-function setName(p) {
-
-}
 
 
 function addCross(ele, index) {

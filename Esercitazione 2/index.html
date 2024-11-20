@@ -12,17 +12,23 @@
 </head>
 <body>
 <div id="modalBackground" class="modalBackground hidden" onclick="game.hideModal()">
-    <h1 id="modalWinner"></h1>
-
+    <h1 id="modalWinner">
+    </h1>
 </div>
 
 <h1> TRIS </h1>
 <hr>
 
 <div id="leaderboard">
-    <h2 id="playerOne.name" onclick="setName(1)" class="playerName player-1 underline"> Player One: &nbsp</h2>
+    <input id="player-1.name"  type="text"
+           onclick="game.setName(1)"
+           class="playerName playerEdit player-1 underline" placeholder=" Player One &nbsp">
+
     <h2 id="playerOne.score" class="playerScore player-1 underline"> 0 </h2>
-    <h2 id="playerTwo.name" onclick="setName(2)" class="playerName player-2"> Player two: &nbsp</h2>
+    <input id="player-2.name" type="text"
+           onclick="game.setName(1)"
+           class="playerName playerEdit player-2" placeholder=" Player One &nbsp">
+
     <h2 id="playerTwo.score" class="playerScore player-2"> 0 </h2>
 
 </div>

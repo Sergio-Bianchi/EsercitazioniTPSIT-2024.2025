@@ -60,7 +60,7 @@
     text-decoration-color: var(--Red-HEX);
 }
 
-#leaderboard > h2:nth-child(3) {
+#leaderboard > *:nth-child(3) {
     margin-right: 0;
     margin-left: auto;
 }
@@ -78,3 +78,9 @@
     align-items: center;
 }
 
+.playerEdit {
+    color: var(--Text-HEX);
+    font-size: 20px;
+    border: 0;
+    background: transparent;
+}
