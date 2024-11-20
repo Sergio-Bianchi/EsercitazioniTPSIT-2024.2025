@@ -113,6 +113,7 @@ body {
     background: var(--Base-HEX);
     color: var(--Text-HEX);
     margin: 30px;
+
 }
 
 
@@ -129,7 +130,9 @@ a:hover {
 }
 
 hr {
-    color: var(--Flamingo-HEX);
+    background: var(--Flamingo-HEX);;
+    border: 0;
+    height: 2px;
 }
 
 .hidden {

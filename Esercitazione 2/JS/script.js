@@ -15,6 +15,11 @@ class Game {
             new Player("Player ONE"),
             new Player("Player TWO")
         ]
+        this.sound = false
+        this.themes = [
+            "DEFAULT", "LATTE", "PEACH", "CHERRY"
+        ]
+        this.theme = 0;
     }
 
     addPoint(p) {
@@ -28,21 +33,20 @@ class Game {
         let playerDivs = document.getElementsByClassName(`player-${p}`);
 
         try {
-            for(let i = 0; i < 2; i++) {
+            for (let i = 0; i < 2; i++) {
                 console.log(i)
                 playerDivs[i].classList.add("underline");
             }
 
-            if(p === 1) {
+            if (p === 1) {
                 playerDivs = document.getElementsByClassName("player-2")
-            }
-            else {
+            } else {
                 playerDivs = document.getElementsByClassName("player-1")
 
             }
 
             console.log(playerDivs)
-            for(let i = 0; i < 2; i++) {
+            for (let i = 0; i < 2; i++) {
                 playerDivs[i].classList.remove("underline")
             }
         } catch (err) {
@@ -61,7 +65,7 @@ class Game {
         }
 
         this.addPoint(p)
-        winnerElement.innerText = this.getPlayerName(p+1) + " wins!"
+        winnerElement.innerText = this.getPlayerName(p + 1) + " wins!"
     }
 
 
@@ -69,7 +73,7 @@ class Game {
         let output = document.getElementById(`player-${p}.name`).value
 
         if (!output) {
-            output = this.players[p-1].name;
+            output = this.players[p - 1].name;
         }
         return output
     }
@@ -117,7 +121,11 @@ class Game {
     resetNames() {
         let inputs = document.getElementsByClassName("playerEdit")
         for (let i in inputs) {
-            inputs[i].value = ""
+            try {
+                inputs[i].value = ""
+            } catch (err) {
+                console.log("Name wasn't specified")
+            }
         }
     }
 
@@ -125,6 +133,67 @@ class Game {
         this.resetBoard();
         this.resetNames();
         this.resetPoints();
+        this.playerSelected = 1;
+    }
+
+    toggleSound(ele) {
+        if (this.sound) {
+            ele.innerText = "SOUND ON"
+            this.sound = false
+        } else {
+            ele.innerText = "SOUND OFF"
+            this.sound = true
+        }
+    }
+
+
+
+    /* * Cambia il tema selezionato */
+    switchTheme(button) {
+
+        /* * Prende tutti gli elementi nella pagina*/
+        let elements = document.getElementsByTagName("*")
+
+        /* * Se il tema è l'ultimo, torna all'inzio*/
+        if (this.theme >= this.themes.length - 1) {
+            this.theme = 0;
+
+            /* * Prova a togliere la classe dell'ultimo tema da ogni elemento */
+            for (let i in elements) {
+                try {
+                    elements[i].classList.remove(`theme-${this.themes.length - 1}`)
+                    console.log("Removed theme-" + j);
+
+                } catch (err) {
+                    console.log("Class not found")
+                }
+            }
+
+            /* * Imposta nel bottone di selezione del tema il default, ed esci dalla funzione*/
+            button.innerText = "THEME: " + this.themes[this.theme];
+            return;
+
+
+        } else {
+            this.theme++
+
+            /* * Per ogni elemento, prova a rimuovere la classe del tema precedente*/
+            for (let i in elements) {
+                try {
+                    elements[i].classList.remove(`theme-${this.theme - 1}`)
+                } catch (err) {
+                    console.log("Class not found")
+                }
+            }
+        }
+
+        /* * Modifica il testo nel campo di selezione del tema*/
+        button.innerText = "THEME: " + this.themes[this.theme];
+
+        /* * Aggiunge il tema selezionato ad ogni elemento nella pagina*/
+        for (let i in elements) {
+            elements[i].classList.add(`theme-${this.theme}`)
+        }
     }
 
     setName(p) {
@@ -135,8 +204,6 @@ class Game {
 
 
 let game = new Game()
-
-
 
 
 function addCross(ele, index) {
@@ -151,22 +218,23 @@ function addCross(ele, index) {
 
     if (game.playerSelected === 1) {
 
-
+        if (game.sound) {
+            document.getElementById("player-1.sound").play()
+        }
 
         ele.classList.add("greenElement", "selected")
-        let audio = new Audio("../IMG/player-1.wav");
-        audio.play();
         game.selectPlayer(2)
 
 
     } else if (game.playerSelected === 2) {
 
+        if (game.sound) {
+            document.getElementById("player-2.sound").play()
+        }
+
         ele.classList.add("redElement", "selected")
-        let audio = new Audio("../IMG/player-2.wav");
-        audio.play();
         game.selectPlayer(1)
     }
-
 
 
     game.move++;

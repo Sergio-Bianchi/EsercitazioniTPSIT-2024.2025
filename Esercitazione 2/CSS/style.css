@@ -1,6 +1,6 @@
 #tris {
     width: 30vw;
-    border: 1px solid var(--Flamingo-HEX);
+    border: 3px solid var(--Flamingo-HEX);
     height: 30vw;
     margin: auto;
     display: grid;
@@ -9,8 +9,9 @@
 
 #tris > div {
     border: 1px solid var(--Crust-HEX);
-    width: 100%;
-    height: 100%;
+    width: 98%;
+    height: 98%;
+    margin: auto;
 
 }
 
@@ -84,3 +85,145 @@
     border: 0;
     background: transparent;
 }
+
+.gameButton:hover {
+    cursor: pointer;
+}
+
+#gameButtons {
+    position: fixed;
+    bottom: 7px;
+}
+
+
+
+
+/* === THEME ONE === */
+
+body.theme-1 {
+    background: var(--Rosewater-HEX);
+}
+
+
+*.theme-1 {
+    color: var(--Surface1-HEX);
+}
+
+hr.theme-1 {
+    background: var(--Maroon-HEX);
+}
+
+#tris.theme-1 {
+    border-color: var(--Red-HEX);
+}
+
+#tris.theme-1>*{
+    border-color: var(--Flamingo-HEX);
+}
+
+#modalBackground.theme-1 > h1 {
+    color: var(--Flamingo-HEX);
+    opacity: 100%;
+}
+
+
+/* === THEME TWO === */
+
+body.theme-2 {
+    background: var(--Peach-HEX);
+}
+
+
+*.theme-2 {
+    color: var(--Surface0-HEX);
+}
+
+hr.theme-2 {
+    background: var(--Red-HEX);
+}
+
+#tris.theme-2 {
+    border-color: var(--Red-HEX);
+}
+
+#tris.theme-2>*{
+    border-color: var(--Flamingo-HEX);
+}
+
+#modalBackground.theme-2 > h1 {
+    color: var(--Flamingo-HEX);
+    opacity: 100%;
+}
+
+/* === THEME THREE === */
+
+body.theme-3 {
+    background: var(--Maroon-HEX) ;
+}
+
+
+*.theme-3 {
+    color: var(--Surface0-HEX);
+
+}
+
+hr.theme-3 {
+    background: var(--Red-HEX);
+}
+
+#tris.theme-3 {
+    border-color: var(--Base-HEX);
+}
+
+#tris.theme-3>*{
+    border-color: var(--Surface2-HEX);
+}
+
+#modalBackground.theme-3 > h1 {
+    color: var(--Flamingo-HEX);
+    opacity: 100%;
+}
+
+
+*.theme-3 > .redElement {
+    background: var(--Peach-HEX);
+}
+
+#leaderboard.theme-3 > .player-1.underline {
+    border-bottom-color: var(--Green-HEX);
+    text-decoration-color: var(--Green-HEX);
+}
+
+#leaderboard.theme-3 > .player-2.underline {
+    border-bottom-color: var(--Peach-HEX);
+    text-decoration-color: var(--Peach-HEX);
+}
+
+/* === THEME FOUR === */
+
+body.theme-4 {
+    background: var(--Rosewater-HEX);
+}
+
+
+*.theme-4 {
+    color: var(--Surface2-HEX);
+}
+
+hr.theme-4 {
+    background: var(--Maroon-HEX);
+}
+
+#tris.theme-4 {
+    border-color: var(--Maroon-HEX);
+}
+
+#tris.theme-4>*{
+    border-color: var(--Flamingo-HEX);
+}
+
+#modalBackground.theme-4 > h1 {
+    color: var(--Flamingo-HEX);
+    opacity: 100%;
+}
+

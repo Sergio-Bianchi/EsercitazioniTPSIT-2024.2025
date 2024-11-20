@@ -9,8 +9,12 @@
     <link rel="stylesheet" href="CSS/style.css">
 
     <link rel="stylesheet" href="../CSS/global.css">
+
 </head>
 <body>
+<audio id="player-1.sound" preload="auto" src="JS/player-1.mp3"> </audio>
+<audio id="player-2.sound" preload="auto" src="JS/player-2.mp3"> </audio>
+
 <div id="modalBackground" class="modalBackground hidden" onclick="game.hideModal()">
     <h1 id="modalWinner">
     </h1>
@@ -45,10 +49,14 @@
     <div onclick="addCross(this, 8)"></div>
 </div>
 
-<h2 onclick="game.resetGame()"> NEW GAME </h2>
-<h2 onclick="game.resetPoints()"> RESET POINTS </h2>
-<h2 onclick="game.resetBoard()"> RESET BOARD </h2>
-<h2 onclick="game.resetNames()"> RESET NAMES </h2>
+<div id="gameButtons">
+    <h2 onclick="game.resetGame()" class="gameButton"> NEW GAME </h2>
+    <h2 onclick="game.resetPoints()" class="gameButton"> RESET POINTS </h2>
+    <h2 onclick="game.resetBoard()" class="gameButton"> RESET BOARD </h2>
+    <h2 onclick="game.resetNames()" class="gameButton"> RESET NAMES </h2>
+    <h2 onclick="game.switchTheme(this)" class="gameButton"> THEME: DEFAULT </h2>
+    <h2 onclick="game.toggleSound(this)" class="gameButton"> SOUND ON </h2>
+</div>
 
 
 </body>
