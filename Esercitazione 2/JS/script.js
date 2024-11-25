@@ -219,7 +219,8 @@ function addCross(ele, index) {
     if (game.playerSelected === 1) {
 
         if (game.sound) {
-            document.getElementById("player-1.sound").play()
+            let audio = new Audio("JS/player-1.mp3");
+            audio.play();
         }
 
         ele.classList.add("greenElement", "selected")
@@ -229,7 +230,8 @@ function addCross(ele, index) {
     } else if (game.playerSelected === 2) {
 
         if (game.sound) {
-            document.getElementById("player-2.sound").play()
+            let audio = new Audio("JS/player-2.mp3");
+            audio.play();
         }
 
         ele.classList.add("redElement", "selected")
