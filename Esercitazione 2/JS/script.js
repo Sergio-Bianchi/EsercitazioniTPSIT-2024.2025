@@ -138,10 +138,10 @@ class Game {
 
     toggleSound(ele) {
         if (this.sound) {
-            ele.innerText = "SOUND ON"
+            ele.innerText = "SOUND OFF"
             this.sound = false
         } else {
-            ele.innerText = "SOUND OFF"
+            ele.innerText = "SOUND ON"
             this.sound = true
         }
     }
