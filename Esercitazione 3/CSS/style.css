@@ -1,0 +1,18 @@
+#drumDiv {
+    width: 90vw;
+    height: 90vh;
+    margin: auto;
+    border: 1px solid green;
+}
+#drumDiv > div {
+
+    border: 1px solid red;
+}
+
+#drumDiv > div:nth-child(1) {
+    width: 0;
+    padding: 20%;
+    box-sizing: border-box;
+    position: relative;
+
+}
