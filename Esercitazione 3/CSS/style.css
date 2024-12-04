@@ -5,14 +5,98 @@
     border: 1px solid green;
 }
 #drumDiv > div {
-
-    border: 1px solid red;
+    position: absolute;
+    opacity: 70%;
 }
 
 #drumDiv > div:nth-child(1) {
-    width: 0;
-    padding: 20%;
-    box-sizing: border-box;
-    position: relative;
+    background: var(--Green-HEX);
+    width: 20vw;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    height: 20vw;
+}
 
+#drumDiv > div:nth-child(2) {
+    width: 10vw;
+    height: 15vw;
+    left: 35vw;
+    top: 65%;
+    z-index: 100;
+    background: var(--Maroon-HEX);
+}
+
+#drumDiv > div:nth-child(3) {
+    width: 14vw;
+    height: 25vw;
+    left: 33vw;
+    top: 48%;
+    z-index: 90;
+    background: var(--Blue-HEX);
+}
+
+#drumDiv > div:nth-child(4) {
+    width: 14vw;
+    height: 22vw;
+    left: 58vw;
+    top: 52%;
+    z-index: 90;
+    background: var(--Flamingo-HEX);
+}
+
+
+#drumDiv > div:nth-child(5) {
+    width: 10vw;
+    height: 10vw;
+    left: 51vw;
+    top: 37%;
+    z-index: 90;
+    background: var(--Peach-HEX);
+}
+
+#drumDiv > div:nth-child(6) {
+    width: 10vw;
+    height: 10vw;
+    left: 39vw;
+    top: 37%;
+    z-index: 90;
+    background: var(--Peach-HEX);
+}
+
+#drumDiv > div:nth-child(7) {
+    width: 10vw;
+    height: 28vw;
+    left: 24vw;
+    top: 45%;
+    z-index: 90;
+    background: var(--Pink-HEX);
+}
+
+#drumDiv > div:nth-child(8) {
+    width: 12vw;
+    height: 8vw;
+    left: 30vw;
+    top: 18%;
+    z-index: 90;
+    background: var(--Mauve-HEX);
+}
+
+#drumDiv > div:nth-child(9) {
+    width: 12vw;
+    height: 8vw;
+    left: 55vw;
+    top: 22%;
+    z-index: 90;
+    background: var(--Mauve-HEX);
+}
+
+#drumDiv > div:nth-child(10) {
+    width: 10vw;
+    height: 6vw;
+    left: 66vw;
+    top: 30%;
+    z-index: 90;
+    background: var(--Mauve-HEX);
 }
