@@ -2,11 +2,19 @@
     width: 90vw;
     height: 90vh;
     margin: auto;
+    /*
     border: 1px solid green;
+    */
 }
 #drumDiv > div {
     position: absolute;
     opacity: 70%;
+    color: black;
+}
+
+#drumDiv > div > img {
+    width: 100%;
+    height: 100%;
 }
 
 #drumDiv > div:nth-child(1) {
@@ -30,7 +38,7 @@
 
 #drumDiv > div:nth-child(3) {
     width: 14vw;
-    height: 25vw;
+    height: 15vw;
     left: 33vw;
     top: 48%;
     z-index: 90;
@@ -38,10 +46,10 @@
 }
 
 #drumDiv > div:nth-child(4) {
-    width: 14vw;
-    height: 22vw;
-    left: 58vw;
-    top: 52%;
+    width: 18vw;
+    height: 18vw;
+    left: 54vw;
+    top: 58%;
     z-index: 90;
     background: var(--Flamingo-HEX);
 }
@@ -67,7 +75,7 @@
 
 #drumDiv > div:nth-child(7) {
     width: 10vw;
-    height: 28vw;
+    height: 10vw;
     left: 24vw;
     top: 45%;
     z-index: 90;
@@ -78,16 +86,17 @@
     width: 12vw;
     height: 8vw;
     left: 30vw;
-    top: 18%;
+    top: 25%;
     z-index: 90;
-    background: var(--Mauve-HEX);
+    background-color: var(--Mauve-HEX);
+
 }
 
 #drumDiv > div:nth-child(9) {
     width: 12vw;
     height: 8vw;
     left: 55vw;
-    top: 22%;
+    top: 25%;
     z-index: 90;
     background: var(--Mauve-HEX);
 }
@@ -96,7 +105,11 @@
     width: 10vw;
     height: 6vw;
     left: 66vw;
-    top: 30%;
+    top: 35%;
     z-index: 90;
     background: var(--Mauve-HEX);
+}
+
+#drumDiv > div {
+    background: none !important;
 }
