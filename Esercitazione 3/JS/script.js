@@ -1,3 +1,4 @@
+/*
 let tom = document.getElementsByClassName("tom-1")[0]
 
 
@@ -40,4 +41,10 @@ function addAlt(e) {
     alt.style.top = `${y}px`;
 
     document.body.append(alt)
+}*/
+
+
+function play(e) {
+    const audio = new Audio(`./WAV/${e.classList[0]}.wav`);
+    audio.play();
 }
