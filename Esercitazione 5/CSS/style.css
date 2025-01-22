@@ -1,0 +1,15 @@
+* {
+    font-family: Impact, sans-serif;
+    letter-spacing: 0.6px;
+}
+
+body {
+    background-color: #24273a;
+    color: var(--Text-HEX);
+    margin: 30px;
+}
+
+canvas {
+    margin: 10px;
+    border: 1px solid green;
+}
