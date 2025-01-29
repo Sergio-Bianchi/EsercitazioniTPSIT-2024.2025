@@ -70,6 +70,11 @@ canva_arr.lineTo(160, 105)
 canva_arr.closePath()
 canva_arr.fill()
 
+/* ESPLODI OO*/
+/* ESPLODI OO*/
+/* ESPLODI OO*/
+/* ESPLODI OO*/
+/* ESPLODI OO*/
 
 canva_lim.beginPath()
 
@@ -86,11 +91,19 @@ canva_lim.arc(150, 150, 100, 0, 2 * Math.PI)
 canva_lim.lineWidth = 20
 canva_lim.strokeStyle = "red"
 canva_lim.stroke()
-
+/* ESPLODI OO*/
+/* ESPLODI OO*/
+/* ESPLODI OO*/
+/* ESPLODI OO*/
+/* ESPLODI OO*/
+/* ESPLODI OO*/
+/* ESPLODI OO*/
+/* ESPLODI OO*/
+/* ESPLODI OO*/
 canva_lim.beginPath()
 canva_lim.fillStyle = "black"
 canva_lim.font = "120px Arial";
-canva_lim.fillText("30", 78, 195)
+canva_lim.fillText("30", 85, 195)
 
 
 canva_att.beginPath()
@@ -130,7 +143,7 @@ canva_att.fill()
 
 canva_att.fillStyle = "black"
 canva_att.font = "140px Arial";
-canva_att.fillText("!", 110, 230)
+canva_att.fillText("!", 130, 230)
 
 
 canva_sal.beginPath()
@@ -190,8 +203,6 @@ canva_sal.restore();
 canva_sal.stroke()
 
 
-
-
 canva_stp.beginPath();
 
 octagon(canva_stp, 150, 150, 130)
@@ -210,7 +221,7 @@ canva_stp.fill();
 canva_stp.fillStyle = "white"
 
 canva_stp.font = "80px Arial";
-canva_stp.fillText("STOP", 55, 180)
+canva_stp.fillText("STOP", 42.5, 180)
 
 
 function octagon(e, centerX, centerY, radius) {
